@@ -48,13 +48,13 @@
 }
 .main-img .main-action {
   position: absolute;
-  top: 50%;
-  display: none;
+  visibility: hidden;
+  top: 40%;
   cursor: pointer;
 }
 @media (max-width: 500px) {
   .main-img .main-action {
-    display: block;
+    visibility: visible;
   }
 }
 
