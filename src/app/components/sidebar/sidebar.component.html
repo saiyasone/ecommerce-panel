@@ -1,0 +1,23 @@
+<ng-container *ngIf="display">
+  <div class="backdrop" (click)="close()"></div>
+</ng-container>
+
+<aside [class.slide]="display">
+  <div class="sidebar-container">
+    <div class="sidebar-header">
+      <img
+        (click)="close()"
+        src="../../../assets/images/icon-close.svg"
+        alt=""
+      />
+    </div>
+
+    <div class="sidebar-items">
+      <a routerLink="/">collections</a>
+      <a routerLink="/">Men</a>
+      <a routerLink="/">women</a>
+      <a routerLink="/">about</a>
+      <a routerLink="/">contact</a>
+    </div>
+  </div>
+</aside>

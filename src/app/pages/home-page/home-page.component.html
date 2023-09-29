@@ -1,0 +1,77 @@
+<div class="home-container">
+  <div class="home-wrapper">
+    <div class="home-images">
+      <div class="main-img">
+        <div (click)="setPrevious()" class="main-action main-prev">
+          <img src="../../../assets/images/icon-previous.svg" alt="" />
+        </div>
+        <img
+          [src]="arrImage[currentIndex].src"
+          [alt]="arrImage[currentIndex].label"
+        />
+        <div (click)="setNext()" class="main-action main-next">
+          <img src="../../../assets/images/icon-next.svg" alt="" />
+        </div>
+      </div>
+      <div class="sub-image">
+        <ng-container *ngFor="let data of arrImage; let i = index">
+          <div (click)="setImage(i)" class="sub-img">
+            <img
+              [src]="data.src"
+              [alt]="data.label"
+              [ngClass]="{ active: currentIndex === i }"
+            />
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="home-info">
+      <div class="home-text">
+        <div class="text-label">
+          <span>sneakers company</span>
+        </div>
+        <div class="text-info">
+          <h2>fall limited edition sneakers</h2>
+        </div>
+        <div class="text-desc">
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+      </div>
+      <div class="home-calc">
+        <!-- Price - Cart -->
+        <div class="calc-price">
+          <div class="price-top">
+            <h2>$125.00</h2>
+            <span> 50% </span>
+          </div>
+          <div class="price-down">
+            <p>$250.00</p>
+          </div>
+        </div>
+
+        <!-- Action - Cart -->
+        <div class="calc-action">
+          <div class="action-count">
+            <button (click)="setDecrease()">
+              <img src="../../../assets/images/icon-minus.svg" alt="" />
+            </button>
+            <input type="number" [(ngModel)]="amount" />
+            <button (click)="setIncrease()">
+              <img src="../../../assets/images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+          <div class="action-cart">
+            <button class="btn-cart" (click)="setCart()">
+              <img src="../../../assets/images/icon-cart.svg" alt="" />
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

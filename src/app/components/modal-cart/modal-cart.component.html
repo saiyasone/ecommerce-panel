@@ -1,0 +1,35 @@
+<div class="modal">
+  <div class="modal-header">
+    <h4>Cart</h4>
+  </div>
+  <div class="modal-body">
+    <ng-container *ngIf="cart.length; else emptyCart">
+      <div *ngFor="let item of cart" class="product-wrapper">
+        <div class="product-item">
+          <div class="product-img">
+            <img [src]="item.src" [alt]="item.label" />
+          </div>
+          <div class="product-title">
+            <p>fall limited edition sneakers</p>
+            <span
+              >$125.00 x {{ item.amount | number }}
+              <strong>${{ item.amount * 125 }} </strong>
+            </span>
+          </div>
+          <div class="product-del" (click)="removeItem()">
+            <img src="../../../assets/images/icon-delete.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="product-action">
+        <button class="btn-cart" (click)="removeItem()">Checkout</button>
+      </div>
+    </ng-container>
+
+    <ng-template #emptyCart>
+      <div class="empty-container">
+        <p>Your cart is empty</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

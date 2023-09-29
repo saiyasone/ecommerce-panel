@@ -1,0 +1,81 @@
+.modal {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 15%);
+  background-color: #fff;
+  border-radius: 8px;
+  width: 350px;
+  z-index: 1;
+}
+@media (max-width: 500px) {
+  .modal {
+    width: 100%;
+  }
+}
+
+.modal .modal-header {
+  border-bottom: 1px solid #ddd;
+  padding: 16px 20px;
+}
+.modal .modal-body {
+  padding: 16px 20px;
+}
+.modal-body .product-wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.product-wrapper .product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.product-item .product-img {
+  overflow: hidden;
+}
+.product-img img {
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.product-item .product-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.product-title p {
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+.product-title span {
+  font-size: 0.8rem;
+}
+.product-item .product-del {
+  cursor: pointer;
+}
+
+.modal-body .product-action {
+  width: 100%;
+  padding-top: 1rem;
+}
+.product-action button {
+  height: 45px;
+  font-size: 1rem;
+}
+
+/* ======== Empty Cart ========= */
+.modal-body .empty-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty-container p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}

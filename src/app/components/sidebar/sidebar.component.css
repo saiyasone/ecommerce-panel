@@ -1,0 +1,56 @@
+.backdrop {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 20%);
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+
+aside.slide {
+  overflow: visible;
+  width: 260px;
+}
+@media (max-width: 450px) {
+  aside.slide {
+    width: 100%;
+  }
+}
+
+aside .sidebar-container {
+  padding: 25px;
+}
+.sidebar-container .sidebar-header {
+  padding-bottom: 2.5rem;
+}
+.sidebar-header img {
+  cursor: pointer;
+}
+
+.sidebar-container .sidebar-items {
+  padding-top: 10px;
+}
+.sidebar-items a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}

@@ -1,0 +1,53 @@
+<app-sidebar [display]="isSlide" (closeEmit)="setSlide()"></app-sidebar>
+<header>
+  <div class="header-container">
+    <nav>
+      <div class="nav-left">
+        <div class="logo">
+          <div (click)="setSlide()" class="nav-brand">
+            <img src="../../../assets/images/icon-menu.svg" alt="" />
+          </div>
+          <a routerLink="/">sneakers</a>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link"> collectors </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link"> men </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link"> women </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link"> about </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link"> contact </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right" appDropdown (clickOutside)="closeModal()">
+        <div class="nav-icons">
+          <div class="nav-cart nav-circle">
+            <div (click)="setModal()" class="cart-icon">
+              <div class="cart-badge">
+                <span class="badge">
+                  {{ totalNumber }}
+                </span>
+              </div>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+          <div class="nav-profile nav-circle">
+            <img src="../../../assets/images/image-avatar.png" alt="avatar" />
+          </div>
+        </div>
+        <!-- !-- Modal Cart -->
+        <ng-container *ngIf="isModal">
+          <app-modal-cart></app-modal-cart>
+        </ng-container>
+      </div>
+    </nav>
+  </div>
+</header>
