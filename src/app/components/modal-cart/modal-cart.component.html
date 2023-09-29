@@ -13,7 +13,7 @@
             <p>fall limited edition sneakers</p>
             <span
               >$125.00 x {{ item.amount | number }}
-              <strong>${{ item.amount * 125 }} </strong>
+              <strong>${{ item.amount * 125 | number }} </strong>
             </span>
           </div>
           <div class="product-del" (click)="removeItem()">
