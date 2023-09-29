@@ -7,6 +7,23 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fd7b1d;
+}
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #fd7b1d;
+} */
+
 .btn-cart {
   border: 0;
   outline: none;
